@@ -8,6 +8,7 @@ The following options are available to pass as environment variables
 * `MONGO_PORT` - Passed to `--port` in `mongodump`, default `27017`
 * `BACKUPS_DIR` - Directory to put backup in, default `backups`
 * `MONGODUMP_PATH` - Path to `mongodump` binary, default `mongodump`
+* `MAX_BACKUPS` - How many backups to retain, default `10`
 
 ## usage
 ### deafult
@@ -17,7 +18,7 @@ $ ./mongo-backup.sh
 
 ### advanced
 ```bash
-$ BACKUPS_DIR=/my/backups/dir MONGO_HOST=<some ip> MONGO_PORT=<some port> ./mongo-backup.sh
+$ MAX_BACKUPS=5 BACKUPS_DIR=/my/backups/dir MONGO_HOST=<some ip> MONGO_PORT=<some port> ./mongo-backup.sh
 ```
 
 ## cron
